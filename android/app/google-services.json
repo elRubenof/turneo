@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "520823482932",
+    "project_id": "turneo-eb22e",
+    "storage_bucket": "turneo-eb22e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:520823482932:android:df36770af4561a14d23861",
+        "android_client_info": {
+          "package_name": "com.bcr.turneo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx11Ik_99CYG8uGctO-_c9n-yC3Dc94xg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
