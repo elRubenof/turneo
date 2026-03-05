@@ -45,3 +45,16 @@ app.*.map.json
 /android/app/release
 
 .vscode/
+
+# Firebase configuration files
+google-services.json
+GoogleService-Info.plist
+lib/firebase_options.dart
+
+# Logs
+*-log.txt
+
+# Generated plugin files
+**/GeneratedPluginRegistrant.swift
+**/generated_plugin_registrant.cc
+**/generated_plugins.cmake
