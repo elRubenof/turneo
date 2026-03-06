@@ -1,17 +1,10 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/foundation.dart';
-import 'package:google_sign_in/google_sign_in.dart';
+part of 'auth_screen.dart';
 
-class AuthController {
-  late GoogleSignIn _googleSignIn;
-  late FirebaseAuth _auth;
+class _AuthController {
+  final GoogleSignIn _googleSignIn = GoogleSignIn.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  AuthController() {
-    _googleSignIn = GoogleSignIn.instance;
-    _auth = FirebaseAuth.instance;
-  }
-
-  Future googleSignIn() async {
+  Future<UserCredential?> googleSignIn() async {
     try {
       await _googleSignIn.initialize();
       final googleUser = await _googleSignIn.authenticate();
@@ -26,6 +19,7 @@ class AuthController {
       return user;
     } catch (e) {
       if (kDebugMode) print(e);
+      return null;
     }
   }
 }

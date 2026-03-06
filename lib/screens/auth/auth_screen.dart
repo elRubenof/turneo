@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:turneo/screens/auth/auth_controller.dart';
+import 'package:flutter/foundation.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+
+part 'auth_controller.dart';
 
 class AuthScreen extends StatelessWidget {
   AuthScreen({super.key});
 
-  final _controller = AuthController();
+  final _controller = _AuthController();
 
   @override
   Widget build(BuildContext context) {
