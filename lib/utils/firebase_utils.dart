@@ -23,6 +23,13 @@ class FirebaseUtils {
     };
   }
 
+  static Future<User?> getAuthUser() {
+    return FirebaseAuth.instance.authStateChanges().first.timeout(
+      const Duration(milliseconds: 500),
+      onTimeout: () => null,
+    );
+  }
+
   static void setUserListener(Function(User? user) function) {
     FirebaseAuth.instance.idTokenChanges().listen((User? user) async {
       if (user != null) {

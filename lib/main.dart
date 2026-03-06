@@ -7,25 +7,28 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await FirebaseUtils.initialize();
 
-  runApp(const MyApp());
+  final user = await FirebaseUtils.getAuthUser();
+  runApp(MyApp(user: user));
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+  final User? user;
+
+  const MyApp({super.key, this.user});
 
   @override
   State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
-  User? user;
+  late User? user = widget.user;
 
   @override
   void initState() {
     super.initState();
 
     FirebaseUtils.setUserListener((value) {
-      setState(() => user = value);
+      if (mounted) setState(() => user = value);
     });
   }
 
