@@ -28,7 +28,7 @@ Managing a rotating schedule (Morning/Afternoon shifts) is often a headache when
 ---
 
 ## 📅 Roadmap
-- [ ] **Phase 1:** Project setup and Google Auth integration.
+- [x] **Phase 1:** Project setup and Google Auth integration.
 - [ ] **Phase 2:** Basic calendar with shifts by color (Morning/Afternoon, Comments and Hours).
 - [ ] **Phase 3:** Real-time database integration (CRUD operations).
 - [ ] **Phase 4:** Group creation and user invitations.
